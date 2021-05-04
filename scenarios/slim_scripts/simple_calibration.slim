@@ -38,7 +38,7 @@ initialize(){
 }
 
 // Add m2 mutations and save
-4800 late() {
+4900 late() {
     // save state
     sim.outputFull("./slim_" + simID + ".txt");
     // introduce m2
@@ -49,7 +49,7 @@ initialize(){
 
 // Wait and check for establishment
 
-4800:5000 late() {
+4900:5000 late() {
 
     mut = sim.mutationsOfType( m2 ) ;
     if ( size(mut) == 1 )
@@ -199,7 +199,7 @@ initialize(){
 	p2.outputVCFSample(sampleSize = sample_size,replace = F,outputMultiallelics = F,filePath ="p2.vcf" );
 	p3.outputVCFSample(sampleSize = sample_size,replace = F,outputMultiallelics = F,filePath ="p3.vcf" );
 	p4.outputVCFSample(sampleSize = sample_size,replace = F,outputMultiallelics = F,filePath ="p4.vcf" );
-	p5.outputVCFSample(sampleSize = sample_size,replace = F,outputMultiallelics = F,filePath ="p5.vcf" );
+	
 
 
    sim.simulationFinished();

@@ -19,7 +19,7 @@ for i, f in enumerate(mutfiles):
         final = pd.read_table(f, sep = " ", header= 0)
     else:
         tmp = pd.read_table(f, sep=" ", header=0)
-        final = tmp.join(final, on="generation", how= "right")
+        final = tmp.merge(final, on="generation", how= "right")
 
 print(final.columns)
 final = final.reset_index()

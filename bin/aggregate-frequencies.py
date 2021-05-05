@@ -16,9 +16,9 @@ mutfiles = sorted( Path(args.directory).glob("p*.mut") )
 
 for i, f in enumerate(mutfiles):
     if i == 0:
-        final = pd.read_table(f, sep = " ", index_col = 0)
+        final = pd.read_table(f, sep = " ", header= 0)
     else:
-        tmp = pd.read_table(f, sep=" ", index_col=0)
+        tmp = pd.read_table(f, sep=" ", header=0)
         final = tmp.join(final, on="generation", how= "right")
 
 print(final.columns)
